@@ -1,43 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>About Page</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./css/styles.css">
+  <title>About Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link id="theme" rel="stylesheet" href="./css/light.css">
+
+  <script>
+    function toggleTheme() {
+      // Obtains an array of all <link>
+      // elements.
+      // Select your element using indexing.
+      var theme = document.getElementsByTagName('link')[0];
+
+      // Change the value of href attribute 
+      // to change the css sheet.
+      if (theme.getAttribute('href') == 'css/light.css') {
+        theme.setAttribute('href', 'css/dark.css');
+      } else {
+        theme.setAttribute('href', 'css/light.css');
+      }
+    }
+  </script>
+  
+  <script>
+    function sweetTheme() {
+      // Obtains an array of all <link>
+      // elements.
+      // Select your element using indexing.
+      var theme = document.getElementsByTagName('link')[0];
+  
+      // Change the value of href attribute 
+      // to change the css sheet.
+      if (theme.getAttribute('href') == 'css/sweet.css') {
+        theme.setAttribute('href', 'css/light.css');
+      } else {
+        theme.setAttribute('href', 'css/sweet.css');
+      }
+    }
+  </script>
 </head>
+
 <body>
 
 
-<header>
-  <h1>Suchawan's Portfolio</h1>
-</header>
+  <header>
+    <h1>Suchawan's Portfolio</h1>
+  </header>
 
-<section>
-  <nav>
-    <ul>
+  <img src="img/idea.png" class="dark-mode" onclick='toggleTheme()'>
+
+  <img src="img/cupcake.png" class="sweet-mode" onclick='sweetTheme()'>
+
+  <section>
+    <nav>
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#">Classworks</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <h2>ABOUT ME</h2>
+      <p>
+          Hi! Nice to see you.<br/>
+          <br/>
+          I am a student who is learning web application development.<br/>
+          I hope my web pages will turn out good!<br/>
+          <br/>
+          <img id="pikachu" src="https://en.meming.world/images/en/thumb/a/af/Surprised_Pikachu_3D.jpg/300px-Surprised_Pikachu_3D.jpg">
+      </p>
+    </article>
+  </section>
   
-  <article>
-    <h2>ABOUT ME</h2>
-    <p>
-        Hi! Nice to see you.<br/>
-        <br/>
-        I am a student who is learning web application development.<br/>
-        I hope my web pages will turn out good!<br/>
-        <br/>
-        <img id="pikachu" src="https://en.meming.world/images/en/thumb/a/af/Surprised_Pikachu_3D.jpg/300px-Surprised_Pikachu_3D.jpg">
-    </p>
-  </article>
-</section>
+  <footer>
+    <p>Contact me: u6135102@au.edu</p>
+  </footer>
+  
+  </body>
 
-<footer>
-  <p>Contact me: u6135102@au.edu</p>
-</footer>
-
-</body>
 </html>

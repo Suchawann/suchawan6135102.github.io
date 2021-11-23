@@ -5,16 +5,53 @@
   <title>Home Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link id="theme" rel="stylesheet" href="./css/light.css">
+
+  <script>
+    function toggleTheme() {
+      // Obtains an array of all <link>
+      // elements.
+      // Select your element using indexing.
+      var theme = document.getElementsByTagName('link')[0];
+
+      // Change the value of href attribute 
+      // to change the css sheet.
+      if (theme.getAttribute('href') == 'css/light.css') {
+        theme.setAttribute('href', 'css/dark.css');
+      } else {
+        theme.setAttribute('href', 'css/light.css');
+      }
+    }
+  </script>
+
+<script>
+  function sweetTheme() {
+    // Obtains an array of all <link>
+    // elements.
+    // Select your element using indexing.
+    var theme = document.getElementsByTagName('link')[0];
+
+    // Change the value of href attribute 
+    // to change the css sheet.
+    if (theme.getAttribute('href') == 'css/sweet.css') {
+      theme.setAttribute('href', 'css/light.css');
+    } else {
+      theme.setAttribute('href', 'css/sweet.css');
+    }
+  }
+</script>
 </head>
 
 <body>
-
 
   <header>
     <h1>Suchawan's Portfolio</h1>
   </header>
 
+  <img src="img/idea.png" class="dark-mode" onclick='toggleTheme()'>
+
+  <img src="img/cupcake.png" class="sweet-mode" onclick='sweetTheme()'>
+  
   <section>
     <nav>
       <ul>
